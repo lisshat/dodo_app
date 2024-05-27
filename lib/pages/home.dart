@@ -1,6 +1,8 @@
+import 'package:dodo_app/pages/taskcreation.dart';
+
 import 'todo_item.dart';
 import 'package:flutter/material.dart';
-import 'colors.dart';
+import '../theme/colors.dart';
 import 'todo.dart' as Todo;
 
 class HomeScreen extends StatelessWidget {
@@ -15,8 +17,11 @@ final todosList = Todo.Todo.todoList();
       appBar: _buildAppBar(),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          createNewTask();
-          print('Add new task');
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => TaskCreation()),
+           );
+      
         },
         child: const Icon(
           Icons.add,
@@ -58,6 +63,7 @@ final todosList = Todo.Todo.todoList();
           Icons.menu,
           color: ddlightpurple,
           size: 30,
+          
         ),
         Icon(
           Icons.person,
@@ -80,7 +86,7 @@ class _currentTasks extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(
+    return const Text(
       'Current Tasks',
       style: TextStyle(
         color: ddlightyellow,

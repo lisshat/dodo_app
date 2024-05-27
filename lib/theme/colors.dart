@@ -10,4 +10,6 @@ const Color ddmuddypurple = Color(0xff74717d);
 
 const Color ddlightpurple = Color(0xffb69ecf);
 
+const Color ddsomesortofpurple = Color(0xff8E839E);
+
 const Color dddarkerrrpurple = Color(0xff40464D);
